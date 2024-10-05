@@ -1,4 +1,4 @@
-FROM apache2:latest
+FROM httpd:2.4
 LABEL maintainer="pradep@gmail.com"
-RUN rm -rf /var/www/html/*
-COPY . /var/www/html
+RUN rm -rf /usr/local/apache2/htdocs/*
+COPY . /usr/local/apache2/htdocs/
