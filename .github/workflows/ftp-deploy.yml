@@ -13,4 +13,4 @@ jobs:
       with:
         server: ftp.pkdev.infinityfreeapp.com
         username: if0_37757426
-        password: ${{ secrets.ftp_password }}
+        password: eGIkJ992hv
