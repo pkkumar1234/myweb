@@ -16,6 +16,6 @@ jobs:
     - name: Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.pkdev.infinityfreeapp.com
+        server: ftp.ftpupload.net
         username: if0_37757426
         password: eGIkJ992hv
