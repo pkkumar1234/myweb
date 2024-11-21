@@ -17,9 +17,9 @@ jobs:
     - name: Deploy to InfinityFree
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.pkdev.infinityfreeapp.com
+        server: ftp://185.27.134.139
         username: if0_37757426
         password: eGIkJ992hv
         #local-dir: "public/" # Change this to your local build/output directory
-        #server-dir: "/htdocs" # Ensure this matches InfinityFree's web root
+        server-dir: "/htdocs" # Ensure this matches InfinityFree's web root
         #log-level: debug  # This will provide detailed logs
