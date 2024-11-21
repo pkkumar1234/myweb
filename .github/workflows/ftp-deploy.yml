@@ -17,7 +17,7 @@ jobs:
     - name: Deploy to InfinityFree
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp://185.27.134.139
+        server: ftp.ftpupload.net
         username: if0_37757426
         password: eGIkJ992hv
         #local-dir: "public/" # Change this to your local build/output directory
