@@ -1,21 +1,25 @@
+name: Deploy Website to InfinityFree
+
 on:
   push:
     branches:
-      - main
-
-name: Deploy website on push
+      - main  # Adjust to your deployment branch
 
 jobs:
-  web-deploy:
-    name: Deploy
+  deploy:
+    name: FTP Deploy
     runs-on: ubuntu-latest
+
     steps:
-    - name: Get latest code
+    - name: Checkout Code
       uses: actions/checkout@v4
 
-    - name: Sync files
+    - name: Deploy to InfinityFree
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: ftp.ftpupload.net
+        server: pkdev.infinityfreeapp.com
         username: if0_37757426
         password: eGIkJ992hv
+        local-dir: "public" # Change this to your local build/output directory
+        server-dir: "/htdocs" # Ensure this matches InfinityFree's web root
+        debug: true
