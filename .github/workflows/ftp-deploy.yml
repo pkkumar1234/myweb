@@ -23,4 +23,4 @@ jobs:
         #local-dir: "public/" # Change this to your local build/output directory
         server-dir: "/htdocs/" # Ensure this matches InfinityFree's web root
         #log-level: debug  # This will provide detailed logs
-        timeout: 600
+        timeout: 120
