@@ -21,6 +21,6 @@ jobs:
         with:
           server: pkdev.infinityfreeapp.com
           username: if0_37757426
-          password: ${{ secrets.FTP_PASSWORD }}
+          password: eGIkJ992hv 
           local-dir: ./ # Directory to upload (adjust as needed)
           server-dir: /path/on/ftp/server/ # Directory on the server
