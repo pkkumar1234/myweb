@@ -1,26 +1,23 @@
-name: FTP Deployment
+name: Deploy to FTP Server
 
 on:
   push:
     branches:
-      - master # Run the workflow on pushes to the `main` branch
+      - main  # Trigger the workflow on pushes to the 'main' branch
 
 jobs:
   deploy:
-    name: Deploy via FTP
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Checkout the repository
-      - name: Checkout Repository
-        uses: actions/checkout@v4
+    - name: Checkout Code
+      uses: actions/checkout@v3  # Check out repository code
 
-      # Step 2: Set up FTP deployment
-      - name: Upload Files to FTP Server
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0
-        with:
-          server: pkdev.infinityfreeapp.com
-          username: if0_37757426
-          password: eGIkJ992hv 
-          local-dir: ./ # Directory to upload (adjust as needed)
-          server-dir: /path/on/ftp/server/ # Directory on the server
+    - name: Deploy to FTP Server
+      uses: SamKirkland/FTP-Deploy-Action@4.3.0
+      with:
+        server: ftpupload.net      # FTP server address
+        username: ${{ secrets.FTP_USERNAME }}  # FTP username
+        password: ${{ secrets.FTP_PASSWORD }}  # FTP password
+        local-dir: ./                          # Directory containing index.html
+        server-dir: /htdocs   # Destination folder on the FTP server
