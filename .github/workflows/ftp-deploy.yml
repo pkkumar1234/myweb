@@ -20,7 +20,7 @@ jobs:
         server: ftp.ftpupload.net
         username: if0_37757426
         password: eGIkJ992hv
-        local-dir: './publish/'                    # Local directory to upload
+        local-dir: './Public/'                    # Local directory to upload
         server-dir: '/htdocs/'
         #log-level: debug  # This will provide detailed logs
         timeout: 120
