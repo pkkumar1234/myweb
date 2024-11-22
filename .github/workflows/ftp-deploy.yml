@@ -1,28 +1,18 @@
-name: Deploy Website to InfinityFree
-
-on:
-  push:
-    branches:
-      - main  # Adjust to your deployment branch
-
+on: push
+name:  Deploy website on push
 jobs:
-  deploy:
-    name: FTP Deploy
+  web-deploy:
+    name:  Deploy
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout Code
+    - name:  Get latest code
       uses: actions/checkout@v4
 
-    - name: Deploy to InfinityFree
+    - name:  Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.ftpupload.net
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: './Public/'                    # Local directory to upload
-        server-dir: '/htdocs/'
-        #log-level: debug  # This will provide detailed logs
-        timeout: 120
-
-        
+        username: if0_37757426
+        password: ${{ secrets.password }}
+        protocol: ftps
+        port: 21 # todo replace with your web hosts ftps port
