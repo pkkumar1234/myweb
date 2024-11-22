@@ -20,7 +20,9 @@ jobs:
         server: ftp.ftpupload.net
         username: if0_37757426
         password: eGIkJ992hv
-        #local-dir: "public/" # Change this to your local build/output directory
-        server-dir: "/htdocs/" # Ensure this matches InfinityFree's web root
+        local-dir: './publish/'                    # Local directory to upload
+        server-dir: '/htdocs/'
         #log-level: debug  # This will provide detailed logs
         timeout: 120
+
+        
