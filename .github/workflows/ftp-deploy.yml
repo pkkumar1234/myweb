@@ -20,4 +20,4 @@ jobs:
         username: ${{ secrets.FTP_USERNAME }}  # FTP username
         password: ${{ secrets.FTP_PASSWORD }}  # FTP password
         local-dir: ./                          # Directory containing index.html
-        server-dir: /htdocs   # Destination folder on the FTP server
+        server-dir: /htdocs/   # Destination folder on the FTP server
